@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
 
   fibonacci_provider = init_cache(fibonacci);
 
-  for (int xx = test_val; xx > 0; xx--) {
+  for (int xx = test_val; xx > -1; xx--) {
     printf(__FILE__ ":%2d fibonacci(%d) = %lld\n", __LINE__, xx,
            (*fibonacci_provider)(xx));
   }
