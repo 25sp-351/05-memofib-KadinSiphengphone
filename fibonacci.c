@@ -7,8 +7,9 @@
 
 typedef long long (*long_long_func_ptr)(int param);
 long_long_func_ptr fibonacci_provider;
+
 long long fibonacci(int of_num) {
-  printf(__FILE__ ":%2d fibonacci(%d) called\n", __LINE__, of_num);
+  // printf(__FILE__ ":%2d fibonacci(%d) called\n", __LINE__, of_num);
   if (of_num < 2) {
     return of_num;
   } else {
@@ -21,7 +22,7 @@ long_long_func_ptr _original_provider;
 long long _memoization_data[ARRAY_SIZE];
 
 long long cache_func(int of_num) {
-  printf(__FILE__ ":%2d   cache_func(%d) called\n", __LINE__, of_num);
+  // printf(__FILE__ ":%2d   cache_func(%d) called\n", __LINE__, of_num);
 
   if (of_num > MAX_MEMOIZED)
     return (*_original_provider)(of_num);
